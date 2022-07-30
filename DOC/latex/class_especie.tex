@@ -1,0 +1,346 @@
+\hypertarget{class_especie}{}\section{Referència de la Classe Especie}
+\label{class_especie}\index{Especie@{Especie}}
+
+
+Representa una espècie.  
+
+
+\subsection*{Mètodes públics}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_especie_a272c2488719cc9874b2f174906675b3d}{Especie} ()
+\begin{DoxyCompactList}\small\item\em Creadora per defecte. \end{DoxyCompactList}\item 
+\hyperlink{class_especie_abd21378dde6e8348d823c6f87a1c0658}{$\sim$\+Especie} ()
+\begin{DoxyCompactList}\small\item\em Destructora per defecte. \end{DoxyCompactList}\item 
+void \hyperlink{class_especie_a83fdef791142b0887bfa7f45bd0d5e0e}{calcular\+\_\+kmer} (int k)
+\begin{DoxyCompactList}\small\item\em Calula els {\itshape kmer} del p.\+i. segons el criteri {\itshape k} \end{DoxyCompactList}\item 
+string \hyperlink{class_especie_a1652f05cd2ff7dc71123bf538ecc4476}{consultar\+\_\+id} () const
+\begin{DoxyCompactList}\small\item\em Consultora d\textquotesingle{}identificador. \end{DoxyCompactList}\item 
+string \hyperlink{class_especie_a850af2b59a21e2d801c59d76ba5c1a98}{consultar\+\_\+gen} () const
+\begin{DoxyCompactList}\small\item\em Consultora del gen. \end{DoxyCompactList}\item 
+double \hyperlink{class_especie_aa7556bc4f5e708a9f918125614ecbb38}{calcular\+\_\+distancia} (const \hyperlink{class_especie}{Especie} \&b) const
+\begin{DoxyCompactList}\small\item\em Consultora de la distància. \end{DoxyCompactList}\item 
+void \hyperlink{class_especie_a7384add391d2684c4fb6bdf8a535fba3}{llegir} ()
+\begin{DoxyCompactList}\small\item\em Operació de lectura. \end{DoxyCompactList}\item 
+void \hyperlink{class_especie_ae24802ae0746b2560a48eea40f64760e}{escriure} () const
+\begin{DoxyCompactList}\small\item\em Operació d\textquotesingle{}escriptura. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atributs Privats}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{class_especie_a91b94109fb8a456bba7199cdda36d588}{id}
+\begin{DoxyCompactList}\small\item\em Identificador. \end{DoxyCompactList}\item 
+string \hyperlink{class_especie_ac35bb565f7346cd6317b3a8c849456d1}{gen}
+\begin{DoxyCompactList}\small\item\em Gen. \end{DoxyCompactList}\item 
+map$<$ string, int $>$ \hyperlink{class_especie_ab6740db160f2d7335a98fa8d9f745cbe}{kmer}
+\begin{DoxyCompactList}\small\item\em Seqüència {\itshape kmer} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descripció Detallada}
+Representa una espècie. 
+
+Cada espècie té associat dos strings, un identificador {\itshape id} i un {\itshape gen}. Els caràcters del string {\itshape gen} poden ser només \textquotesingle{}A\textquotesingle{}, \textquotesingle{}C\textquotesingle{}, \textquotesingle{}T\textquotesingle{} i/o \textquotesingle{}G\textquotesingle{}. Es pot calcular la distància entre l\textquotesingle{}espècie del p.\+i. i una altra. L\textquotesingle{}espècie té associada una seqüència {\itshape kmer} (que pot estar no calculada, per tant buida) que serveix per calcular les distàncies entre espècies. {\itshape kmer} conté uns certs strings i és generada a través del {\itshape gen} de l\textquotesingle{}espècie i l\textquotesingle{}enter {\itshape k} que indica el criteri de càlcul del \hyperlink{class_cjt___especies}{Cjt\+\_\+\+Especies} el qual aquestes pertanyen. La classe té operacions de lectura i escriptura. 
+
+Definició a la línia 21 del fitxer Especie.\+hh.
+
+
+
+\subsection{Documentació del Constructor i el Destructor}
+\mbox{\Hypertarget{class_especie_a272c2488719cc9874b2f174906675b3d}\label{class_especie_a272c2488719cc9874b2f174906675b3d}} 
+\index{Especie@{Especie}!Especie@{Especie}}
+\index{Especie@{Especie}!Especie@{Especie}}
+\subsubsection{\texorpdfstring{Especie()}{Especie()}}
+{\footnotesize\ttfamily Especie\+::\+Especie (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creadora per defecte. 
+
+\begin{DoxyPrecond}{Precondició}
+{\itshape Cert} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+El resultat és una Espècie buida 
+\end{DoxyPostcond}
+
+
+Definició a la línia 5 del fitxer Especie.\+cc.
+
+
+\begin{DoxyCode}
+5 \{\}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_especie_abd21378dde6e8348d823c6f87a1c0658}\label{class_especie_abd21378dde6e8348d823c6f87a1c0658}} 
+\index{Especie@{Especie}!````~Especie@{$\sim$\+Especie}}
+\index{````~Especie@{$\sim$\+Especie}!Especie@{Especie}}
+\subsubsection{\texorpdfstring{$\sim$\+Especie()}{~Especie()}}
+{\footnotesize\ttfamily Especie\+::$\sim$\+Especie (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructora per defecte. 
+
+
+
+Definició a la línia 7 del fitxer Especie.\+cc.
+
+
+\begin{DoxyCode}
+7 \{\}
+\end{DoxyCode}
+
+
+\subsection{Documentació de les Funcions Membre}
+\mbox{\Hypertarget{class_especie_a83fdef791142b0887bfa7f45bd0d5e0e}\label{class_especie_a83fdef791142b0887bfa7f45bd0d5e0e}} 
+\index{Especie@{Especie}!calcular\+\_\+kmer@{calcular\+\_\+kmer}}
+\index{calcular\+\_\+kmer@{calcular\+\_\+kmer}!Especie@{Especie}}
+\subsubsection{\texorpdfstring{calcular\+\_\+kmer()}{calcular\_kmer()}}
+{\footnotesize\ttfamily void Especie\+::calcular\+\_\+kmer (\begin{DoxyParamCaption}\item[{int}]{k }\end{DoxyParamCaption})}
+
+
+
+Calula els {\itshape kmer} del p.\+i. segons el criteri {\itshape k} 
+
+\begin{DoxyPrecond}{Precondició}
+El p.\+i. té {\itshape gen}. {\itshape k} $>$= 1. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+El p.\+i. té calculat el {\itshape kmer} segons el criteri de càlcul {\itshape k} 
+\end{DoxyPostcond}
+
+
+Definició a la línia 25 del fitxer Especie.\+cc.
+
+
+\begin{DoxyCode}
+25                                  \{
+26     \hyperlink{class_especie_ab6740db160f2d7335a98fa8d9f745cbe}{kmer}.clear();
+27     
+28     \textcolor{keywordtype}{int} n = \hyperlink{class_especie_ac35bb565f7346cd6317b3a8c849456d1}{gen}.size();
+29     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n - k + 1; ++i) \{
+30         \textcolor{keywordtype}{string} aux = \textcolor{stringliteral}{""};
+31         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < k; ++j) \{
+32             aux.push\_back(\hyperlink{class_especie_ac35bb565f7346cd6317b3a8c849456d1}{gen}[j+i]);
+33         \}
+34         ++\hyperlink{class_especie_ab6740db160f2d7335a98fa8d9f745cbe}{kmer}[aux];
+35     \}
+36 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_especie_a1652f05cd2ff7dc71123bf538ecc4476}\label{class_especie_a1652f05cd2ff7dc71123bf538ecc4476}} 
+\index{Especie@{Especie}!consultar\+\_\+id@{consultar\+\_\+id}}
+\index{consultar\+\_\+id@{consultar\+\_\+id}!Especie@{Especie}}
+\subsubsection{\texorpdfstring{consultar\+\_\+id()}{consultar\_id()}}
+{\footnotesize\ttfamily string Especie\+::consultar\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Consultora d\textquotesingle{}identificador. 
+
+\begin{DoxyPrecond}{Precondició}
+{\itshape id} del p.\+i. no és buit 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+Retorna {\itshape id} 
+\end{DoxyPostcond}
+
+
+Definició a la línia 9 del fitxer Especie.\+cc.
+
+
+\begin{DoxyCode}
+9                                    \{
+10     \textcolor{keywordflow}{return} \hyperlink{class_especie_a91b94109fb8a456bba7199cdda36d588}{id};
+11 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_especie_a850af2b59a21e2d801c59d76ba5c1a98}\label{class_especie_a850af2b59a21e2d801c59d76ba5c1a98}} 
+\index{Especie@{Especie}!consultar\+\_\+gen@{consultar\+\_\+gen}}
+\index{consultar\+\_\+gen@{consultar\+\_\+gen}!Especie@{Especie}}
+\subsubsection{\texorpdfstring{consultar\+\_\+gen()}{consultar\_gen()}}
+{\footnotesize\ttfamily string Especie\+::consultar\+\_\+gen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Consultora del gen. 
+
+\begin{DoxyPrecond}{Precondició}
+{\itshape gen} del p.\+i. no és buit 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+Retorna el {\itshape gen} de la espècie 
+\end{DoxyPostcond}
+
+
+Definició a la línia 13 del fitxer Especie.\+cc.
+
+
+\begin{DoxyCode}
+13                                     \{
+14     \textcolor{keywordflow}{return} \hyperlink{class_especie_ac35bb565f7346cd6317b3a8c849456d1}{gen};
+15 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_especie_aa7556bc4f5e708a9f918125614ecbb38}\label{class_especie_aa7556bc4f5e708a9f918125614ecbb38}} 
+\index{Especie@{Especie}!calcular\+\_\+distancia@{calcular\+\_\+distancia}}
+\index{calcular\+\_\+distancia@{calcular\+\_\+distancia}!Especie@{Especie}}
+\subsubsection{\texorpdfstring{calcular\+\_\+distancia()}{calcular\_distancia()}}
+{\footnotesize\ttfamily double Especie\+::calcular\+\_\+distancia (\begin{DoxyParamCaption}\item[{const \hyperlink{class_especie}{Especie} \&}]{b }\end{DoxyParamCaption}) const}
+
+
+
+Consultora de la distància. 
+
+\begin{DoxyPrecond}{Precondició}
+{\itshape kmer} no és buit 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+Retorna la distància entre l\textquotesingle{}espècie {\itshape b} i la espècie del p.\+i. consultant dels {\itshape kmer} de cadascún 
+\end{DoxyPostcond}
+
+
+Definició a la línia 38 del fitxer Especie.\+cc.
+
+
+\begin{DoxyCode}
+38                                                          \{
+39     \textcolor{keywordflow}{if} (\textcolor{keywordtype}{id} == b.\hyperlink{class_especie_a1652f05cd2ff7dc71123bf538ecc4476}{consultar\_id}()) \textcolor{keywordflow}{return} 0;
+40     
+41     \textcolor{keywordtype}{double} inter = 0, unio = 0;    
+42     map<string,int>::const\_iterator it1 = \hyperlink{class_especie_ab6740db160f2d7335a98fa8d9f745cbe}{kmer}.begin();
+43     map<string,int>::const\_iterator it2 = b.\hyperlink{class_especie_ab6740db160f2d7335a98fa8d9f745cbe}{kmer}.begin();
+44     
+45     \textcolor{keywordflow}{while} (it1 != \hyperlink{class_especie_ab6740db160f2d7335a98fa8d9f745cbe}{kmer}.end() and it2 != b.\hyperlink{class_especie_ab6740db160f2d7335a98fa8d9f745cbe}{kmer}.end()) \{ 
+46         
+47         \textcolor{keywordflow}{if} (it1->first > it2->first) \{
+48             unio = unio + it2->second;
+49             ++it2;
+50         \}
+51         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (it1->first < it2->first) \{
+52             unio = unio + it1->second;
+53             ++it1;
+54         \}
+55         \textcolor{keywordflow}{else} \{ \textcolor{comment}{//it1->first == it2->first}
+56             inter = inter + min(it1->second,it2->second);
+57             unio = unio + max(it1->second,it2->second);
+58             ++it1;
+59             ++it2;
+60         \}
+61     \}    
+62     
+63     \textcolor{keywordflow}{if} (it2 != b.\hyperlink{class_especie_ab6740db160f2d7335a98fa8d9f745cbe}{kmer}.end()) \{
+64         \textcolor{keywordflow}{while} (it2 != b.\hyperlink{class_especie_ab6740db160f2d7335a98fa8d9f745cbe}{kmer}.end()) \{
+65             unio = unio + it2->second;
+66             ++it2;
+67         \}
+68     \}
+69     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (it1 != \hyperlink{class_especie_ab6740db160f2d7335a98fa8d9f745cbe}{kmer}.end()) \{
+70         \textcolor{keywordflow}{while} (it1 != \hyperlink{class_especie_ab6740db160f2d7335a98fa8d9f745cbe}{kmer}.end()) \{
+71             unio = unio + it1->second;
+72             ++it1;
+73         \}
+74     \}
+75     \textcolor{keywordflow}{return} (1-(inter/unio))*100;
+76 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_especie_a7384add391d2684c4fb6bdf8a535fba3}\label{class_especie_a7384add391d2684c4fb6bdf8a535fba3}} 
+\index{Especie@{Especie}!llegir@{llegir}}
+\index{llegir@{llegir}!Especie@{Especie}}
+\subsubsection{\texorpdfstring{llegir()}{llegir()}}
+{\footnotesize\ttfamily void Especie\+::llegir (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Operació de lectura. 
+
+\begin{DoxyPrecond}{Precondició}
+Hi ha preparats al canal estandar d\textquotesingle{}entrada dos strings {\itshape id} i {\itshape gen}; {\itshape gen} està format pels caràcters \textquotesingle{}A\textquotesingle{}, \textquotesingle{}C\textquotesingle{}, \textquotesingle{}T\textquotesingle{} i/o \textquotesingle{}G\textquotesingle{}; 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+El paràmetre implícit passa a tenir els atributs llegits del canal estàndard d\textquotesingle{}entrada; 
+\end{DoxyPostcond}
+
+
+Definició a la línia 17 del fitxer Especie.\+cc.
+
+
+\begin{DoxyCode}
+17                      \{
+18     cin >> \textcolor{keywordtype}{id} >> \hyperlink{class_especie_ac35bb565f7346cd6317b3a8c849456d1}{gen};
+19 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_especie_ae24802ae0746b2560a48eea40f64760e}\label{class_especie_ae24802ae0746b2560a48eea40f64760e}} 
+\index{Especie@{Especie}!escriure@{escriure}}
+\index{escriure@{escriure}!Especie@{Especie}}
+\subsubsection{\texorpdfstring{escriure()}{escriure()}}
+{\footnotesize\ttfamily void Especie\+::escriure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Operació d\textquotesingle{}escriptura. 
+
+\begin{DoxyPrecond}{Precondició}
+{\itshape id} i {\itshape gen} del p.\+i. no són buits 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+Imprimeix en el canal estàndard de sortida la espècie (identificador i gen) 
+\end{DoxyPostcond}
+
+
+Definició a la línia 21 del fitxer Especie.\+cc.
+
+
+\begin{DoxyCode}
+21                              \{
+22     cout << \textcolor{keywordtype}{id} << \textcolor{charliteral}{' '} << \hyperlink{class_especie_ac35bb565f7346cd6317b3a8c849456d1}{gen} << endl;
+23 \}
+\end{DoxyCode}
+
+
+\subsection{Documentació de les Dades Membre}
+\mbox{\Hypertarget{class_especie_a91b94109fb8a456bba7199cdda36d588}\label{class_especie_a91b94109fb8a456bba7199cdda36d588}} 
+\index{Especie@{Especie}!id@{id}}
+\index{id@{id}!Especie@{Especie}}
+\subsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily string Especie\+::id\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Identificador. 
+
+Està format exclusivament per lletres minúscules i majúscules (de la A a la Z, sense caràcters especials, ni vocals accentuades...), dígits i per caràcters de subratllat\+: \textquotesingle{}\+\_\+\textquotesingle{} . 
+
+Definició a la línia 29 del fitxer Especie.\+hh.
+
+\mbox{\Hypertarget{class_especie_ac35bb565f7346cd6317b3a8c849456d1}\label{class_especie_ac35bb565f7346cd6317b3a8c849456d1}} 
+\index{Especie@{Especie}!gen@{gen}}
+\index{gen@{gen}!Especie@{Especie}}
+\subsubsection{\texorpdfstring{gen}{gen}}
+{\footnotesize\ttfamily string Especie\+::gen\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Gen. 
+
+Els caràcters del string {\itshape gen} poden ser només \textquotesingle{}A\textquotesingle{}, \textquotesingle{}C\textquotesingle{}, \textquotesingle{}T\textquotesingle{} i/o \textquotesingle{}G\textquotesingle{}. 
+
+Definició a la línia 35 del fitxer Especie.\+hh.
+
+\mbox{\Hypertarget{class_especie_ab6740db160f2d7335a98fa8d9f745cbe}\label{class_especie_ab6740db160f2d7335a98fa8d9f745cbe}} 
+\index{Especie@{Especie}!kmer@{kmer}}
+\index{kmer@{kmer}!Especie@{Especie}}
+\subsubsection{\texorpdfstring{kmer}{kmer}}
+{\footnotesize\ttfamily map$<$string,int$>$ Especie\+::kmer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Seqüència {\itshape kmer} 
+
+Conjunt de les subseqüències contínues (del {\itshape gen}) de longitud {\itshape k} $>$= 1 (criteri de càlcul donat); o també anomenat els k-\/mers de {\itshape gen}. Si {\itshape n} és la longitud de {\itshape gen}, els kmer és el conjunt\+: \{g\mbox{[}i..j + k − 1\mbox{]} $\vert$ 0 ≤ i $<$ n + 1 − k\}, on g\mbox{[}i..j\mbox{]} denota la subseqüència de {\itshape gen} entre els símbols i-\/èssim i j-\/èssim de {\itshape gen}, que assumim que s\textquotesingle{}indexen de 0 a n-\/1.
+
+Les claus (strings) són les sucessions de {\itshape k} caràcters del {\itshape gen}. L\textquotesingle{}enter $>$ 0, és el número de cops que apareix cada element del conjunt. 
+
+Definició a la línia 43 del fitxer Especie.\+hh.
+
+
+
+La documentació d\textquotesingle{}aquesta classe es va generar a partir dels següents fitxers\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_especie_8hh}{Especie.\+hh}\item 
+\hyperlink{_especie_8cc}{Especie.\+cc}\end{DoxyCompactItemize}

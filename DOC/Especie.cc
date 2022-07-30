@@ -1,0 +1,4 @@
+
+    llegir() {
+    cin >> id >> gen;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Construcció d&#39;un arbre filogenètic: Fitxer de Codi Cluster.hh</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Construcció d&#39;un arbre filogenètic
+   &#160;<span id="projectnumber">Ferran De La Varga Antoja</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generat per Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Cerca');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Cluster.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_cluster_8hh.html">Veure la documentació d'aquest fitxer.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#ifndef CLUSTER_HH</span></div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#define CLUSTER_HH</span></div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#ifndef NO_DIAGRAM</span></div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;BinTree.hh&quot;</span></div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacestd.html">std</a>;</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#endif</span></div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div><div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_cluster.html">   30</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_cluster.html">Cluster</a> {</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    </div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">private</span>: </div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    </div><div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_cluster.html#a1a623435b5ec16328059c9300fa0dfaa">   40</a></span>&#160;    BinTree&lt; pair&lt;string, double&gt;&gt; <a class="code" href="class_cluster.html#a1a623435b5ec16328059c9300fa0dfaa">c</a>;</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    </div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> escriure_BinTree(<span class="keyword">const</span> BinTree&lt;pair&lt;string,double&gt;&gt;&amp; c);</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    </div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    </div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="comment">//Constructores</span></div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    </div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="class_cluster.html">Cluster</a>();</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    </div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="class_cluster.html">Cluster</a>(<span class="keywordtype">string</span> <span class="keywordtype">id</span>);</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    </div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    </div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="comment">//Destructora</span></div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    </div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    ~<a class="code" href="class_cluster.html">Cluster</a>();</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    </div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    </div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="comment">//Modificadores</span></div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    </div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keyword">static</span> <a class="code" href="class_cluster.html">Cluster</a> fusionar_clusters(<span class="keyword">const</span> <a class="code" href="class_cluster.html">Cluster</a>&amp; a, <span class="keyword">const</span> <a class="code" href="class_cluster.html">Cluster</a>&amp; b, <span class="keywordtype">double</span> distancia);</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="comment">//Consultores</span></div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    </div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keywordtype">string</span> consultar_id() <span class="keyword">const</span>;</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="comment">//Lectura y escriptura</span></div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    </div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="keywordtype">void</span> escriure() <span class="keyword">const</span>;</div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    </div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;};</div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="namespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div></div>
+<div class="ttc" id="class_cluster_html_a1a623435b5ec16328059c9300fa0dfaa"><div class="ttname"><a href="class_cluster.html#a1a623435b5ec16328059c9300fa0dfaa">Cluster::c</a></div><div class="ttdeci">BinTree&lt; pair&lt; string, double &gt; &gt; c</div><div class="ttdoc">Clúster. </div><div class="ttdef"><b>Definition:</b> <a href="_cluster_8hh_source.html#l00040">Cluster.hh:40</a></div></div>
+<div class="ttc" id="class_cluster_html"><div class="ttname"><a href="class_cluster.html">Cluster</a></div><div class="ttdoc">Representa un clúster. </div><div class="ttdef"><b>Definition:</b> <a href="_cluster_8hh_source.html#l00030">Cluster.hh:30</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generat per &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

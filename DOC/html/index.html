@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Construcció d&#39;un arbre filogenètic: Construcció d&#39;un arbre filogenètic</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Construcció d&#39;un arbre filogenètic
+   &#160;<span id="projectnumber">Ferran De La Varga Antoja</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generat per Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Cerca');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Construcció d'un arbre filogenètic </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>Aquest programa modular ofereix un menú d'opcions per construir un arbre filogenètic basat en el mètode WPGMA. S'utilitzen les classes <a class="el" href="class_especie.html" title="Representa una espècie. ">Especie</a>, <a class="el" href="class_cjt___especies.html" title="Representa un conjunt d&#39;espècies. ">Cjt_Especies</a>, <a class="el" href="class_cluster.html" title="Representa un clúster. ">Cluster</a> i <a class="el" href="class_cjt___clusters.html" title="Representa un conjunt de clústers. ">Cjt_Clusters</a>.</p>
+<p>Els nodes d'aquest arbre filogenètic, anomenats clústers, estan formats per espècies. Els clústers que estan dins de l'arbre estan a una certa distància entre ells (llargada de les branques de l'arbre) que és equivalent a la distància entre les espècies que estan dins d'aquests clústers.</p>
+<p>Al principi del programa es llegeix un natural que servirà pel càlcul de distàncies. Després, es llegeix una sèrie d'instruccions que determinaran l'evolució del programa.</p>
+<p>Aquest programa té diverses opcions, però la idea principal és: primer es creen unes certes espècies que els hi pots consultar el gen i la distància entre elles. Aquestes espècies estan dins d'un conjunt d'espècies que té associada una taula de distàncies entre elles i es pot imprimir. Convertint les espècies en clústers i passant-los al conjunt de clústers, es pot imprimir també una taula de distàncies entre els clústers del conjunt. Des d'allà, s'aplica l'algorisme WPGMA i s'imprimeix l'arbre filogenètic. </p>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generat per &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

@@ -1,0 +1,1 @@
+tar -cvf practica.tar Especie.cc Especie.hh Cluster.cc Cluster.hh Cjt_Especies.cc Cjt_Especies.hh Cjt_Clusters.cc Cjt_Clusters.hh program.cc Makefile html.zip

@@ -1,0 +1,154 @@
+\hypertarget{program_8cc}{}\section{Referència del Fitxer program.\+cc}
+\label{program_8cc}\index{program.\+cc@{program.\+cc}}
+Inclou el graf de dependències per a program.\+cc\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{program_8cc__incl}
+\end{center}
+\end{figure}
+\subsection*{Funcions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{program_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentació de les Funcions}
+\mbox{\Hypertarget{program_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{program_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{program.\+cc@{program.\+cc}!main@{main}}
+\index{main@{main}!program.\+cc@{program.\+cc}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definició a la línia 22 del fitxer program.\+cc.
+
+
+\begin{DoxyCode}
+22            \{
+23     \textcolor{keywordtype}{int} k;
+24     cin >> k; 
+25     \hyperlink{class_cjt___especies}{Cjt\_Especies} esp(k);  
+26     \hyperlink{class_cjt___clusters}{Cjt\_Clusters} clu;  
+27     \textcolor{keywordtype}{string} op;
+28     
+29     \textcolor{keywordflow}{while} (cin >> op and op != \textcolor{stringliteral}{"fin"}) \{
+30         cout << \textcolor{stringliteral}{"# "} << op;
+31         
+32         \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"crea\_especie"}) \{            
+33             \hyperlink{class_especie}{Especie} e;
+34             e.\hyperlink{class_especie_a7384add391d2684c4fb6bdf8a535fba3}{llegir}();
+35             cout << \textcolor{charliteral}{' '};
+36             e.\hyperlink{class_especie_ae24802ae0746b2560a48eea40f64760e}{escriure}();
+37             \textcolor{keywordtype}{string} \textcolor{keywordtype}{id} = e.\hyperlink{class_especie_a1652f05cd2ff7dc71123bf538ecc4476}{consultar\_id}();
+38             
+39             \textcolor{keywordflow}{if} (not esp.hi\_es(\textcolor{keywordtype}{id})) \{
+40                 esp.afegir\_especie(e);
+41             \}
+42             \textcolor{keywordflow}{else} \{
+43                 cout << \textcolor{stringliteral}{"ERROR: La especie "} << \textcolor{keywordtype}{id} << \textcolor{stringliteral}{" ya existe."} << endl;
+44             \}
+45         \}
+46         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"obtener\_gen"}) \{
+47             \textcolor{keywordtype}{string} id;
+48             cin >> id;
+49             cout << \textcolor{charliteral}{' '} << \textcolor{keywordtype}{id} << endl;
+50             \textcolor{keywordflow}{if} (esp.hi\_es(\textcolor{keywordtype}{id})) \{
+51                 cout << esp.consultar\_gen(\textcolor{keywordtype}{id}) << endl;
+52             \}
+53             \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"ERROR: La especie "} << \textcolor{keywordtype}{id} << \textcolor{stringliteral}{" no existe."} << endl;
+54             
+55         \}
+56         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"distancia"}) \{
+57             \textcolor{keywordtype}{string} id1, id2;
+58             cin >> id1 >> id2;
+59             cout << \textcolor{charliteral}{' '} << id1 << \textcolor{charliteral}{' '} << id2 << endl;
+60             
+61             \textcolor{keywordtype}{bool} b1 = esp.hi\_es(id1);
+62             \textcolor{keywordtype}{bool} b2 = esp.hi\_es(id2);
+63             
+64             \textcolor{keywordflow}{if} (b1 and b2) cout << esp.consultar\_distancia(id1,id2) << endl;
+65             \textcolor{keywordflow}{else} \{
+66                 cout << \textcolor{stringliteral}{"ERROR: La especie "};
+67                 \textcolor{keywordflow}{if} (not b1 and not b2) \{
+68                     cout << id1 << \textcolor{stringliteral}{" y la especie "} << id2 << \textcolor{stringliteral}{" no existen."} << endl;
+69                 \}
+70                 \textcolor{keywordflow}{else} \{
+71                     \textcolor{keywordflow}{if} (not b1) cout << id1;
+72                     \textcolor{keywordflow}{else} cout << id2;
+73                     cout << \textcolor{stringliteral}{" no existe."} << endl;
+74                 \}
+75             \}
+76         \}
+77         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"elimina\_especie"}) \{        
+78             \textcolor{keywordtype}{string} id;
+79             cin >> id;
+80             cout << \textcolor{charliteral}{' '} << \textcolor{keywordtype}{id} << endl;
+81             \textcolor{keywordflow}{if} (esp.hi\_es(\textcolor{keywordtype}{id})) \{
+82                 esp.eliminar\_especie(\textcolor{keywordtype}{id});
+83             \}
+84             \textcolor{keywordflow}{else} \{
+85                 cout << \textcolor{stringliteral}{"ERROR: La especie "} << \textcolor{keywordtype}{id} << \textcolor{stringliteral}{" no existe."} << endl;
+86             \}
+87         \}
+88         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"existe\_especie"}) \{
+89             \textcolor{keywordtype}{string} id;
+90             cin >> id;
+91             cout << \textcolor{charliteral}{' '} << \textcolor{keywordtype}{id} << endl;
+92             
+93             \textcolor{keywordflow}{if} (esp.hi\_es(\textcolor{keywordtype}{id})) cout << \textcolor{stringliteral}{"SI"};
+94             \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"NO"};
+95             cout << endl;
+96         \}
+97         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"lee\_cjt\_especies"}) \{
+98             cout << endl;
+99             esp.llegir();
+100         \}
+101         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"imprime\_cjt\_especies"}) \{
+102             cout << endl;
+103             esp.escirure();
+104         \}
+105         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"tabla\_distancias"}) \{
+106             cout << endl;
+107             esp.escriure\_taula\_distancies();
+108         \}
+109         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"inicializa\_clusters"}) \{
+110             cout << endl;
+111             clu.\hyperlink{class_cjt___clusters_a7bbb88f22b1ec3a53302f646813c4602}{clear}();
+112             esp.omplir\_cjt\_clusters(clu);
+113             clu.\hyperlink{class_cjt___clusters_a0a2476e10eec73bccddae9a2c6b998d2}{escriure\_taula\_distancies}();
+114         \}
+115         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"ejecuta\_paso\_wpgma"}) \{
+116             cout << endl;
+117             \textcolor{keywordflow}{if} (clu.\hyperlink{class_cjt___clusters_ac8f1dc8aefd1619f4a78c04624dedcc0}{numero\_clusters}() > 1) \{
+118                 clu.\hyperlink{class_cjt___clusters_a2f8e0a00fc5a706ebdd71dc0c42c5c76}{pas\_WPGMA}();
+119                 clu.\hyperlink{class_cjt___clusters_a0a2476e10eec73bccddae9a2c6b998d2}{escriure\_taula\_distancies}();
+120             \}
+121             \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"ERROR: num\_clusters <= 1"} << endl;
+122         \}
+123         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"imprime\_cluster"}) \{
+124             \textcolor{keywordtype}{string} a;
+125             cin >> a;
+126             cout << \textcolor{charliteral}{' '} << a << endl;
+127             
+128             \hyperlink{class_cluster}{Cluster} c;
+129             \textcolor{keywordflow}{if} (clu.\hyperlink{class_cjt___clusters_a3e0776e946a8363e70d53493b39c09a6}{consultar\_cluster}(a,c)) c.\hyperlink{class_cluster_aae67c144fc543eace946dc8a651b5b7a}{escriure}();
+130             \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"ERROR: El cluster "} << a << \textcolor{stringliteral}{" no existe."} << endl;
+131         \}
+132         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"imprime\_arbol\_filogenetico"}) \{
+133             cout << endl;
+134             clu.\hyperlink{class_cjt___clusters_a7bbb88f22b1ec3a53302f646813c4602}{clear}();
+135             esp.omplir\_cjt\_clusters(clu);
+136             \textcolor{keywordflow}{if} (clu.\hyperlink{class_cjt___clusters_ac8f1dc8aefd1619f4a78c04624dedcc0}{numero\_clusters}() != 0) \{
+137                 clu.\hyperlink{class_cjt___clusters_aa4de01f6c66018acd6ac04f9686f0a17}{aplicar\_algorisme\_WPGMA}();
+138                 clu.\hyperlink{class_cjt___clusters_acd1311eabbf986a9e45e373e06976b42}{escriure\_arbre\_filogenetic}();
+139             \}
+140             \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"ERROR: El conjunto de clusters es vacio."} << endl;
+141         \}
+142 
+143         cout << endl;
+144     \}
+145 \}
+\end{DoxyCode}

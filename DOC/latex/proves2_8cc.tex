@@ -1,0 +1,59 @@
+\hypertarget{proves2_8cc}{}\section{Referència del Fitxer proves2.\+cc}
+\label{proves2_8cc}\index{proves2.\+cc@{proves2.\+cc}}
+Inclou el graf de dependències per a proves2.\+cc\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{proves2_8cc__incl}
+\end{center}
+\end{figure}
+\subsection*{Funcions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{proves2_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentació de les Funcions}
+\mbox{\Hypertarget{proves2_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{proves2_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{proves2.\+cc@{proves2.\+cc}!main@{main}}
+\index{main@{main}!proves2.\+cc@{proves2.\+cc}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definició a la línia 23 del fitxer proves2.\+cc.
+
+
+\begin{DoxyCode}
+23            \{
+24     \textcolor{keywordtype}{int} k;
+25     cin >> k; 
+26     \hyperlink{class_cjt___especies}{Cjt\_Especies} esp(k);  
+27 \textcolor{comment}{//    Cjt\_Clusters clu;  }
+28     \textcolor{keywordtype}{string} op;
+29     
+30     \textcolor{keywordflow}{while} (cin >> op and op != \textcolor{stringliteral}{"fin"}) \{
+31         cout << \textcolor{stringliteral}{"# "} << op;
+32         \textcolor{comment}{/*}
+33 \textcolor{comment}{        if (op == "lee\_cjt\_especies") esp.llegir();}
+34 \textcolor{comment}{        else if (op == "imprime\_cjt\_especies") esp.escirure();}
+35 \textcolor{comment}{        */}
+36         
+37         \textcolor{keywordflow}{if} (op == \textcolor{stringliteral}{"distancia"}) \{
+38             \hyperlink{class_especie}{Especie} e1, e2;
+39             e1.\hyperlink{class_especie_a7384add391d2684c4fb6bdf8a535fba3}{llegir}();
+40             e2.\hyperlink{class_especie_a7384add391d2684c4fb6bdf8a535fba3}{llegir}();
+41 
+42             e1.\hyperlink{class_especie_a83fdef791142b0887bfa7f45bd0d5e0e}{calcular\_kmer}(k);
+43             cout << \textcolor{stringliteral}{"executat 1"} << endl;
+44             e2.\hyperlink{class_especie_a83fdef791142b0887bfa7f45bd0d5e0e}{calcular\_kmer}(k);
+45             cout << \textcolor{stringliteral}{"executat 2"} << endl;
+46             cout << e1.\hyperlink{class_especie_aa7556bc4f5e708a9f918125614ecbb38}{calcular\_distancia}(e2) << endl;
+47 
+48         \}
+49         cout << endl;
+50     \}
+51 \}
+\end{DoxyCode}
