@@ -6,4 +6,4 @@ Documentation (language: Spanish and Catalan) and evaluation of this laboratory 
 
 There were different deliveries which corresponds to the different Zip files.
 
-Final mark: 9.52 out of 10.
+**Final mark: 9.52 out of 10.**
